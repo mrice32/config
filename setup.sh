@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
 
+USER_NAME=$(printf '%s' "${SUDO_USER:-$USER}")
+
+# Should be run with sudo
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-echo $DIR
+# Non sudo commands
+sudo -u $USER_NAME cp $DIR/.bashrc ~/
+sudo -u $USER_NAME cp $DIR/.vimrc ~/
 
-cp $DIR/.bashrc ~/
-cp $DIR/.vimrc ~/
-
-git clone https://github.com/magicmonty/bash-git-prompt.git ~/bash-git-prompt
-mv ~/bash-git-prompt ~/.bash-git-prompt
+sudo -u $USER_NAME git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt
 
 # Only works for mac and ubuntu for now
 OS_IDENTIFIER=`uname`
