@@ -3,8 +3,13 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+echo $DIR
+
 cp $DIR/.bashrc ~/
 cp $DIR/.vimrc ~/
+
+git clone https://github.com/magicmonty/bash-git-prompt.git ~/bash-git-prompt
+mv ~/bash-git-prompt ~/.bash-git-prompt
 
 # Only works for mac and ubuntu for now
 OS_IDENTIFIER=`uname`
