@@ -26,9 +26,14 @@ if [ "$OS_IDENTIFIER" == "Darwin" ]; then
 	port selfupdate
 	port upgrade outdated
 	port install nmap
+    ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
+    easy_install pip
 else
     echo "Linux (Ubuntu) detected"
     apt-get update
     apt-get upgrade
     apt-get install nmap
+    apt-get install python-pip
 fi
+
+pip install --upgrade pip
