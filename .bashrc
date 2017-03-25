@@ -28,6 +28,7 @@ GIT_PROMPT_SHOW_UNTRACKED_FILES=all # can be no, normal or all; determines count
 # as last entry source the gitprompt script
 # GIT_PROMPT_THEME=Custom # use custom theme specified in file GIT_PROMPT_THEME_FILE (default ~/.git-prompt-colors.sh)
 GIT_PROMPT_THEME_FILE=~/.git-prompt-colors.sh
+GIT_PROMPT_THEME=Custom
 # GIT_PROMPT_THEME=Solarized # use theme optimized for solarized color scheme
 source ~/.bash-git-prompt/gitprompt.sh
 
@@ -43,3 +44,6 @@ source ~/.bash-git-prompt/gitprompt.sh
 #export GIT_PS1_SHOWUPSTREAM="verbose git"
 #
 #export GIT_PS1_SHOWCOLORHINTS="Y"
+
+# virtualenv
+source ~/base.env/bin/activate
