@@ -22,10 +22,10 @@ OS_IDENTIFIER=`uname`
 # Update packages
 
 if [ "$OS_IDENTIFIER" == "Darwin" ]; then
-	echo "Mac Detected"
-	port selfupdate
-	port upgrade outdated
-	port install nmap
+    echo "Mac Detected"
+    port selfupdate
+    port upgrade outdated
+    port install nmap
     ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
     easy_install pip
 else
