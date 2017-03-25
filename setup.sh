@@ -50,8 +50,8 @@ VIRTUAL_ENV_DIR=~/base.env
 if [ ! -d "$VIRTUAL_ENV_DIR" ]; then
     sudo -u $USER_NAME virtualenv $VIRTUAL_ENV_DIR --no-site-packages
     chown -R $USER_NAME $VIRTUAL_ENV_DIR
-    chmod u+rwx -R $VIRTUAL_ENV_DIR
-    chmod a+rx -R $VIRTUAL_ENV_DIR
+    chmod -R u+rwx $VIRTUAL_ENV_DIR
+    chmod -R a+rx $VIRTUAL_ENV_DIR
 fi
 
 
