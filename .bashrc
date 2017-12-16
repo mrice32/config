@@ -47,3 +47,6 @@ source ~/.bash-git-prompt/gitprompt.sh
 
 # virtualenv
 source ~/base.env/bin/activate
+
+# git completion
+source ~/git-completion.bash

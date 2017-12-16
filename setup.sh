@@ -11,6 +11,7 @@ sudo -u $USER_NAME cp $DIR/.bash_profile ~/
 sudo -u $USER_NAME cp $DIR/.bashrc ~/
 sudo -u $USER_NAME cp $DIR/.vimrc ~/
 sudo -u $USER_NAME cp $DIR/.git-prompt-colors.sh ~/
+sudo -u $USER_NAME cp $DIR/git-completion.bash ~/
 
 # Move so that the clone will work initially, and then overwrite whatever currently exists if anything
 INITIAL_DIR_NAME=~/bash-git-prompt
